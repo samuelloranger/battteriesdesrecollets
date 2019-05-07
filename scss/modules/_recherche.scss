@@ -1,0 +1,92 @@
+.recherche{
+  &__titre{
+    margin-top: 30%;
+    text-align: center;
+
+    @media(min-width: $bureau){
+      margin-top: 1%;
+    }
+  }
+
+  &__informations{
+    margin-bottom: 5%;
+
+    h2{
+      margin: 0;
+      font-family: $fonteSecondaire;
+      text-transform: none;
+      @include fontSize(22px)
+    }
+
+    input[type=text]{
+      border: 1px solid;
+      border-radius: 4px;
+      width: 45%;
+      margin-top: 3%;
+    }
+
+    input[type=submit]{
+      border: 1px solid black;
+    }
+
+    @media(min-width: $bureau){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__resultats{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__produit{
+    transition: 0.25s ease-in-out;
+
+    @media(min-width: $bureau){
+      width: 50%;
+      display: flex;
+      margin-bottom: 2%;
+    }
+
+    &__image{
+      img{
+        transition: 0.25s ease-in-out;
+      }
+
+      @media(min-width: $bureau) {
+        width: span(2 of 12);
+      }
+    }
+
+    &__informations{
+      @media(min-width: $bureau){
+        width: 50%;
+      }
+
+      &__titre{
+        text-align: center;
+        margin-top: 0;
+
+        h3{
+          transition: 0.25s ease-in-out;
+        }
+
+        @media(min-width: $bureau){
+          text-align: left;
+          margin-left: 5%;
+        }
+      }
+    }
+
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
+
+      h3{
+        color: $vert;
+      }
+    }
+  }
+}

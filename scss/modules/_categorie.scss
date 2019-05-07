@@ -1,0 +1,81 @@
+/**
+ * @author: Samuel Loranger <samuelloranger@gmail.com>
+ */
+
+.categorie{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__titre{
+    margin-top: 7%;
+    text-align: center;
+
+    @media(min-width: $bureau){
+      margin-top: 1%;
+    }
+  }
+
+  &__produit{
+    position: relative;
+
+    @media(min-width: $bureau) {
+      width: 100%;
+      display: flex;
+
+      margin-right: gutter(12);
+
+      &:nth-of-type(4){
+        margin-right: 0;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      @media(min-width: $bureau){
+        width: span(3 of 12);
+      }
+
+      img {
+        @media(min-width: $bureau) {
+          transition: 0.25s ease-in-out;
+        }
+      }
+    }
+
+    &__titre{
+      text-align: center;
+      margin-top: 3%;
+      transition: 0.25s ease-in-out;
+    }
+
+    &__informations{
+      display: flex;
+      justify-content: space-between;
+
+      &__titre{
+        margin-top: 0;
+      }
+
+      &__prix{
+        @include fontSize(18px);
+        margin-top: 0;
+      }
+
+      @media(min-width: $bureau){
+        display: block;
+        margin-left: gutter(12);
+      }
+    }
+
+    &:hover{
+      img{
+        transform: scale(1.02);
+      }
+
+      h3{
+        color: $vert;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/**
+ * @author Samuel Loranger <samuelloranger@gmail.com>
+*/
+
+.footer {
+  box-shadow: 0px 0px 12px black;
+  margin-top: 12%;
+
+  @media(min-width: $bureau){
+    margin-top: 5%;
+  }
+
+  &__contenu{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media(min-width: $bureau){
+      flex-direction: row;
+    }
+
+    &__logo{
+      width: span(3);
+      margin: 5% auto 0 auto;
+
+      @media(min-width: $bureau){
+        margin: 2% 0 0 0;
+        height: 15%;
+        width: span(3 of 12);
+      }
+    }
+
+    &__widget{
+      h3{
+        font-family: $fontePrimaire;
+        margin-bottom: 0;
+      }
+
+      h4{
+        margin-bottom: 0;
+        margin-top: 5%;
+        @include fontSize(22px);
+        font-family: $fonteSecondaireBold;
+      }
+
+      input[type=text]{
+        border: 1px solid;
+        border-radius: 4px;
+        width: 45%;
+      }
+
+      input[type=submit]{
+        border: 1px solid black;
+      }
+    }
+  }
+
+  &__credits{
+    width: 100%;
+    text-align:center;
+    margin: 5% auto 0 auto;
+    padding-bottom: 1%;
+
+    a{
+      text-decoration: underline;
+      transition: 0.25s ease-in-out;
+      display: inline-block;
+
+      &:hover{
+        transform: scale(1.03);
+      }
+    }
+
+    @media(min-width: $bureau){
+      width: 40%;
+    }
+  }
+}

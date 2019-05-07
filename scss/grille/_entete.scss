@@ -1,0 +1,334 @@
+/**
+ * @author Samuel Loranger <samuelloranger@gmail.com>
+ */
+.noscript {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  font-family: $fonteSecondaire;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.header {
+  box-shadow: 0px 0px 12px #888888;
+  min-width: 100%;
+  top: 0;
+  background-color: white;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 50;
+
+  @media(min-width: $bureau){
+    position: relative;
+    height: 22rem;
+  }
+
+  &__conteneur{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__reseauxSociaux{
+    display: none;
+
+    @media(min-width: $bureau){
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+      transition: 0.25s ease-in-out;
+
+      @media(min-width: 905px){
+        width: 30%;
+      }
+
+      &__facebook{
+        display: flex;
+        background-color: #3A559F;
+        width: 60px;
+        height: 50px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        transition: 0.25s ease-in-out;
+
+        &__logo{
+          display: block;
+          background-image: url("../images/svg/facebook.svg");
+          background-repeat: no-repeat;
+          width: 22px;
+          height: 42px;
+          top: 8px;
+          margin-top: 9px;
+          margin-left: 25px;
+          transition: 0.25s ease-in-out;
+        }
+
+        &:hover{
+          background-color: $vert;
+
+          span{
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &__telephone{
+        display: flex;
+        background-color: black;
+        color: white;
+        width: 210px;
+        height: 50px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        transition: 0.25s ease-in-out;
+
+        &__logo{
+          display: block;
+          background-image: url("../images/svg/phone-white.svg");
+          background-repeat: no-repeat;
+          width: 58px;
+          height: 38px;
+          margin-top: 3%;
+          margin-left: 3%;
+          transition: 0.25s ease-in-out;
+        }
+
+        &__num{
+          font-family: $fontePrimaire;
+          margin-top: 5%;
+          transition: 0.25s ease-in-out;
+        }
+
+        &:hover{
+          background-color: $vert;
+
+          span{
+            transform: scale(1.1);
+            color: black;
+
+            &:first-of-type{
+              background-image: url("../images/svg/phone-black.svg");
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  &__logo{
+    display: block;
+    width: span(2 of 4);
+    margin-top: 2%;
+
+    @media(min-width: $bureau){
+      width: span(4 of 12);
+    }
+
+    img{
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__nav{
+    display: none;
+
+    @media(min-width: $bureau){
+      display: block;
+      width: span(7 of 12);
+
+      ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 15%;
+
+        li{
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          width: 48%;
+
+          &::after{
+            display: none;
+
+          }
+
+          @media(min-width: 905px){
+            width: 25%;
+
+            &::after{
+              content: "";
+              display: inline-block;
+              width: 5px;
+              height: 39px;
+              background-color: $vert;
+              margin-left: 12px;
+            }
+
+            &:last-of-type::after{
+              background-color: white;
+            }
+          }
+
+
+          a{
+            font-family: $fontePrimaire;
+            @include fontSize(26px);
+            transition: 0.5s;
+
+            &::after{
+              animation-name: hoverBureauCacher;
+              animation-duration: 0.5s;
+              content: "";
+              display: block;
+              width: 0%;
+              height: 3px;
+              background-color: #62AE5A;
+              margin: 0 auto;
+            }
+
+            &:hover{
+              transform: scale(1.1);
+
+              &::after {
+                animation-name: hoverBureauAfficher;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__navMobile{
+    position: fixed;
+    padding-right: 24px;
+    width: 18rem;
+    background: white;
+    margin-top: 5.5rem;
+    top: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    box-shadow: 0px 10px 9px #31313159;
+    z-index: 999;
+
+    .menu-principal-container{
+      width: 80%;
+
+      ul{
+        li{
+          text-align: right;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          border-bottom: 5px solid $vert;
+
+          &:last-of-type{
+            border-bottom: 0px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+          }
+
+          a {
+            padding: 5px 5px;
+            @include fontSize(22px);
+            font-family: $fontePrimaire;
+          }
+        }
+      }
+    }
+
+
+    @media(min-width: $bureau){
+      display: none;
+    }
+
+    &--ouvert{
+      animation-name: menuMobileAfficher;
+      animation-duration: 0.5s;
+      opacity: 10;
+      right: 0;
+
+      @media(min-width: $bureau){
+        display: none;
+      }
+    }
+
+    &--ferme{
+      animation-name: menuMobileCacher;
+      animation-duration: 0.5s;
+      opacity: 0;
+      right: -28rem;
+    }
+
+
+  }
+}
+
+.menuItem__active{
+  a{
+    color: $vertFonce;
+
+  }
+}
+
+
+/* Animation pour afficher le menu mobile */
+@keyframes menuMobileAfficher {
+  from {
+    opacity: 0;
+    right: -28rem;
+  }
+  to {
+    opacity: 10;
+    right: 0rem;
+  }
+}
+
+/* Animation pour cacher le menu mobile */
+@keyframes menuMobileCacher {
+  from {
+    opacity: 10;
+    right: 0rem;
+  }
+  to {
+    opacity: 0;
+    right: -28rem;
+  }
+}
+
+
+
+/* Animation pour afficher le menu mobile */
+@keyframes hoverBureauAfficher {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animation pour cacher le menu mobile */
+@keyframes hoverBureauCacher {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

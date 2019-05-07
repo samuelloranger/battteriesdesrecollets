@@ -1,0 +1,113 @@
+.contact{
+
+  &__titre{
+    text-align: center;
+    margin-top: 30%;
+
+    @media(min-width: $bureau){
+      margin-top: 1%;
+    }
+  }
+
+  &__conteneur{
+    @media(min-width: $bureau){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__carte{
+    width: 100%;
+    height: 32rem;
+
+    @media(min-width: $bureau){
+      width: span(4 of 12);
+    }
+  }
+
+  &__informations{
+    @media(min-width: $bureau){
+      width: span(7 of 12);
+    }
+
+    &__adresse{
+      h2, h3, p{
+        margin: 0;
+      }
+    }
+
+    &__heuresOuvertures{
+      h2{
+        margin-bottom: 0;
+
+        @media(max-width: $bureau){
+          @include fontSize(26px);
+        }
+      }
+
+      &__tableau{
+        table{
+          width: 100%;
+
+          @media(min-width: $bureau){
+            width: 45%;
+          }
+
+          .mbhi-is-current{
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+
+  &__equipe{
+    &__titre{
+      text-align: center;
+      margin-top: 10%;
+
+      @media(min-width: $bureau){
+        margin-top: 5%;
+      }
+    }
+
+    &__membres{
+
+      @media(min-width: $bureau){
+        display: flex;
+        justify-content: space-around;
+      }
+
+      &__membre{
+        position: relative;
+
+        &__image{
+          @media(min-width: $bureau){
+            max-width: 350px;
+          }
+        }
+        &__informations{
+          position: absolute;
+          top: 73%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.65);
+          padding: 8px 0px;
+
+          &__nom{
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            color: white;
+          }
+
+          &__fonction{
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

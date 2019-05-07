@@ -1,0 +1,53 @@
+/**
+ * @author: Samuel Loranger <samuelloranger@gmail.com>
+ */
+
+.ficheProduit{
+
+  &__conteneur{
+    @media(min-width: $bureau){
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3%;
+    }
+
+    &__titreMobile{
+      margin-top: 7%;
+      text-align: center;
+
+      @media(min-width: $bureau){
+        display: none;
+      }
+    }
+
+    &__contenu{
+      @media(min-width: $bureau){
+        width: span(8 of 12);
+      }
+
+      &__titre{
+        display: none;
+
+        @media(min-width: $bureau){
+          display: block;
+          margin: 0;
+        }
+      }
+
+      &__description{
+        @media(min-width: $bureau){
+          //display: block;
+          margin: 0;
+        }
+      }
+    }
+
+    &__image{
+      @media(min-width: $bureau){
+        width: span(4 of 12);
+        height: span(4 of 12);
+      }
+    }
+  }
+
+}
