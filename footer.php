@@ -24,7 +24,7 @@
     </div>
 
     <div class="footer__credits">
-        <small>Site par <a href="https://www.linkedin.com/in/samuel-loranger-b23205174/">Samuel Loranger</a> | Batteries des Récollets &copy; Tous droits réservés</small>
+        <small>Site par <a href="https://www.linkedin.com/in/samuel-loranger-b23205174/">Samuel Loranger</a> | Batteries des Récollets 2019 &copy; Tous droits réservés</small>
     </div>
 
 </footer>

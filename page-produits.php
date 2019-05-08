@@ -7,7 +7,7 @@ get_header(); ?>
 <!-- Author: Samuel Loranger -->
 <div id="contenu" class="">
     <div class="conteneur">
-        <h2 id="services" class="produits__titre">Nos produits</h2>
+        <h1 id="services" class="produits__titre">Nos produits</h1>
         <div class="produits__recherche">
 	        <?php get_search_form(); ?>
         </div>

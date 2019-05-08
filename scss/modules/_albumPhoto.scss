@@ -1,0 +1,28 @@
+/**
+ * @author: Samuel Loranger <samuelloranger@gmail.com>
+ */
+
+.albumPhoto{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__titre{
+    margin-top: 30%;
+    text-align: center;
+
+    @media(min-width: $bureau) {
+      margin-top: 4%;
+    }
+  }
+
+  &__conteneur{
+    display: flex;
+    flex-wrap: wrap;
+
+    figure{
+      margin: 0;
+      width: 33%;
+    }
+  }
+}

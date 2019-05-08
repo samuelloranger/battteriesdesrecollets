@@ -37,6 +37,8 @@
       }
 
       img {
+        width: 100%;
+
         @media(min-width: $bureau) {
           transition: 0.25s ease-in-out;
         }

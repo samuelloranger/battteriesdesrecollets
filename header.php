@@ -23,8 +23,8 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-config" content="<?php echo $lienRacine; ?>images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#000000">
-<!--    <link rel="stylesheet" href="--><?php //echo $lienRacine; ?><!--css/styles.css"/>-->
-    <link rel="stylesheet" href="<?php echo $lienRacine; ?>css/styles.min.css"/>
+    <link rel="stylesheet" href="<?php echo $lienRacine; ?>css/styles.css"/>
+<!--    <link rel="stylesheet" href="--><?php //echo $lienRacine; ?><!--css/styles.min.css"/>-->
     <?php wp_head(); ?>
 
 </head>

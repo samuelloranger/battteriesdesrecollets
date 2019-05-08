@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-  * @author Emie Pelletier <1761129@cegep-ste-foy.qc.ca>
+  * @author Samuel Loranger <samuelloranger@gmail.com>
  **/
 /**
  * ------------------
@@ -1623,6 +1623,7 @@ h4, .h4 {
     margin-right: 0;
     width: 71.186440678%;
     height: 245px;
+    min-height: 245px;
     margin-top: 4%;
   }
 }
@@ -1687,8 +1688,18 @@ h4, .h4 {
 }
 .produits__produit__logo {
   width: 50%;
+  height: 50%;
   margin: 0 auto;
   transition: 0.25s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+}
+.produits__produit__logo img[src*=".svg"] {
+  width: 50%;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .produits__produit__logo img[src*=".svg"] {
+    width: 50%;
+  }
 }
 .produits__produit__titre {
   margin-top: 8%;
@@ -1739,6 +1750,9 @@ h4, .h4 {
   .categorie__produit__image {
     width: 23.7288135593%;
   }
+}
+.categorie__produit__image img {
+  width: 100%;
 }
 @media (min-width: 600px) {
   .categorie__produit__image img {
@@ -1826,7 +1840,7 @@ h4, .h4 {
 }
 @media (min-width: 600px) {
   .contact__titre {
-    margin-top: 1%;
+    margin-top: 4%;
   }
 }
 @media (min-width: 600px) {
@@ -1994,6 +2008,58 @@ h4, .h4 {
 }
 .recherche__produit:hover h3 {
   color: #62AE5A;
+}
+
+/**
+ * @author: Samuel Loranger <samuelloranger@gmail.com>
+ */
+.albumPhoto {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.albumPhoto__titre {
+  margin-top: 30%;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .albumPhoto__titre {
+    margin-top: 4%;
+  }
+}
+.albumPhoto__conteneur {
+  display: flex;
+  flex-wrap: wrap;
+}
+.albumPhoto__conteneur figure {
+  margin: 0;
+  width: 33%;
+}
+
+/**
+ * @author: Samuel Loranger <samuelloranger@gmail.com>
+ */
+.albumPhoto {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.albumPhoto__titre {
+  margin-top: 30%;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .albumPhoto__titre {
+    margin-top: 4%;
+  }
+}
+.albumPhoto__conteneur {
+  display: flex;
+  flex-wrap: wrap;
+}
+.albumPhoto__conteneur figure {
+  margin: 0;
+  width: 33%;
 }
 
 /****** Grille ******/

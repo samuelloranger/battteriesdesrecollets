@@ -45,8 +45,22 @@
 
     &__logo{
       width: 50%;
+      height: 50%;
       margin: 0 auto;
       transition: 0.25s ease-in-out;
+      background-color: rgba(0, 0, 0, 0);
+
+
+      img[src*=".svg"] {
+        width: 50%;
+      }
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        img[src*=".svg"] {
+          width: 50%;
+        }
+      }
+
     }
 
     &__titre{
