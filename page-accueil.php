@@ -14,7 +14,7 @@ get_header(); ?>
         <div class="accueil__services">
             <?php
             $posts = get_posts(array(
-                'posts per page' => -1,
+	            'nopaging' => true,
                 'post_type' => 'services',
                 'post_status' => 'the_title',
                 'orderby' => 'the_title',
@@ -52,9 +52,9 @@ get_header(); ?>
         <div class="accueil__produits conteneur">
             <?php
             $posts = get_posts(array(
-                'posts per page' => -1,
+	            'numberposts' => 4,
                 'post_type' => 'produits',
-                'post_status' => 'the_title',
+                'post_status' => 'publish',
                 'orderby' => 'meta_value_num',
                 'order' => 'DESC',
             ));

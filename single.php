@@ -41,7 +41,6 @@ if(is_active_sidebar("gauche")) { ?>
         <p class="metadata">Publié le: <?php the_date();?></p>
 
     </div>
-
 </main>
 
 <?php

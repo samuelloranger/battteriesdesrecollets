@@ -1,10 +1,14 @@
 <!-- Importation du header -->
 <?php get_header(); ?>
 
+<?php $image = get_field("image_produit");
+
+$nomCategorie = strtolower(get_field("categorie"));
+?>
+
 <main class="ficheProduit conteneur">
-    <a class="pageBouton bouton" href="<?= get_post_permalink(52);?>"><span>Retour aux produits</span></a>
+    <a class="pageBouton bouton" href="<?= get_site_url(); ?>/categorie-produits/produits-<?= $nomCategorie; ?>/"><span>Retour aux <?= $nomCategorie; ?></span></a>
     <div class="ficheProduit__conteneur">
-        <?php $image = get_field("image_produit"); ?>
 
         <h2 class="ficheProduit__conteneur__titreMobile"><?= get_field("nom_produit"); ?></h2>
         <img class="ficheProduit__conteneur__image" src="<?= $image["url"]; ?>">

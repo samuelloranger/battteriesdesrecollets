@@ -14,33 +14,43 @@ get_header(); ?>
 
         <div class="produits">
             <a class="produits__produit" href="<?= get_site_url(); ?>/produits-solaire/">
-                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/solar-panel.svg" alt="icone solaire"/>
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/solar-panel.svg" alt=""/>
                 <h3 class="produits__produit__titre">Solaire</h3>
             </a>
 
             <a class="produits__produit" href="<?= get_site_url(); ?>/produits-lampes/">
-                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/lumiere.svg" alt="icone lampe"/>
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/lumiere.svg" alt=""/>
                 <h3 class="produits__produit__titre">Lampes</h3>
             </a>
 
             <a class="produits__produit" href="<?= get_site_url(); ?>/produits-batteries/">
-                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/batteries.svg" alt="icone batteries"/>
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/batteries.svg" alt=""/>
                 <h3 class="produits__produit__titre">Batteries</h3>
             </a>
 
             <a class="produits__produit" href="<?= get_site_url(); ?>/produits-quadriporteur/">
-                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/scooter.svg" alt="icone quadriporteur"/>
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/scooter.svg" alt=""/>
                 <h3 class="produits__produit__titre">Quadriporteurs</h3>
             </a>
 
             <a class="produits__produit" href="<?= get_site_url(); ?>/produits-chargeurs/">
-                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/charging.svg" alt="icone chargeurs"/>
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/charging.svg" alt=""/>
                 <h3 class="produits__produit__titre">Chargeurs</h3>
             </a>
 
-            <a class="produits__produit" href="<?= get_site_url(); ?>/produits-solaire/">
-                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/chauffe-eau.svg" alt="icone chauffe-eau"/>
+            <a class="produits__produit" href="<?= get_site_url(); ?>/produits-chauffe-eau/">
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/chauffe-eau.svg" alt=""/>
                 <h3 class="produits__produit__titre">Chauffe-eau</h3>
+            </a>
+
+            <a class="produits__produit" href="<?= get_site_url(); ?>/produits-pompes/">
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/pompes.svg" alt=""/>
+                <h3 class="produits__produit__titre">Pompes</h3>
+            </a>
+
+            <a class="produits__produit" href="<?= get_site_url(); ?>/produits-accessoires/">
+                <img class="produits__produit__logo" src="<?= $lienRacine; ?>images/svg/accessoires.svg" alt=""/>
+                <h3 class="produits__produit__titre">Accessoires</h3>
             </a>
         </div>
     </div>
