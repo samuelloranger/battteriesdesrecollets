@@ -3,9 +3,22 @@
  */
 
 .categorie{
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+
+  @media(-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media(min-width: 600px){
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  @media(min-width: 830px){
+    grid-template-columns: 25% 25% 25% 25%;
+  }
 
   &__titre{
     margin-top: 7%;
@@ -16,28 +29,79 @@
     }
   }
 
+
   &__produit{
     position: relative;
+    margin-bottom: 5%;
+    padding: 5%;
 
-    @media(min-width: $bureau) {
-      width: 100%;
-      display: flex;
+    //Internet Explorer
+    @media(-ms-high-contrast: none), (-ms-high-contrast: active) {
+      padding: 1%;
+      width: 25%;
+      margin-bottom: 1%;
+    }
 
+    //Petite tablette
+    @media(max-width: 740px){
+      max-width: span(6 of 12);
       margin-right: gutter(12);
 
-      &:nth-of-type(4){
+      &:nth-of-type(2n){
+        margin-right: 0;
+      }
+    }
+
+    //Grande tablette
+    @media(min-width: 741px) and (max-width: 950px){
+      max-width: span(4 of 12);
+      margin-right: gutter(12);
+
+      &:nth-of-type(3n){
+        margin-right: 0;
+      }
+    }
+
+    //Bureau et +
+    @media(min-width: 951px) {
+      max-width: span(3 of 12);
+      margin-right: gutter(12);
+
+      &:nth-of-type(4n){
         margin-right: 0;
       }
     }
 
     &__image {
-      width: 100%;
+      overflow: hidden;
+      transition: .25s ease-in-out;
+      box-shadow: 0 0 6px #000;
+
       @media(min-width: $bureau){
-        width: span(3 of 12);
+        width: 35vw;
+        height: 35vw;
+      }
+
+      @media(min-width: 740px){
+        width: 32vw;
+        height: 32vw;
+      }
+
+      @media(min-width: 950px){
+        width: 24vw;
+        height: 24vw;
+        max-width: 228px;
+        max-height: 228px;
+      }
+
+      @media(-ms-high-contrast: active), (-ms-high-contrast: none){
+        width: 11vw;
+        height: 11vw;
       }
 
       img {
         width: 100%;
+        display: block;
 
         @media(min-width: $bureau) {
           transition: 0.25s ease-in-out;
@@ -48,15 +112,18 @@
     &__titre{
       text-align: center;
       margin-top: 3%;
-      transition: 0.25s ease-in-out;
+      transition: .25s ease-in-out
     }
 
     &__informations{
-      display: flex;
-      justify-content: space-between;
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin-top: 0;
 
       &__titre{
         margin-top: 0;
+        margin-bottom: 0;
+        transition: 0.25s ease-in-out;
       }
 
       &__prix{
@@ -72,12 +139,46 @@
 
     &:hover{
       img{
-        transform: scale(1.02);
+        transform: scale(1.08);
       }
 
       h3{
-        color: $vert;
+        color: $vertHover;
       }
+    }
+  }
+}
+
+.en_vedette{
+  background-color: lightgrey;
+
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    color: white;
+    font-family: "Alfa Slab One", alfaslabone-regular, Arial, sans-serif;
+    font-size: 1.4em;
+    content: "En vedette";
+    background-color: rgba(0, 0, 0, 0.65);
+    padding-left: 8px;
+    padding-top: 4px;
+    width: 90%;
+    height: 15%;
+    border-bottom-right-radius: 10px;
+    transition: 0.25s ease-in-out;
+
+    @media(min-width: 435px){
+      width: 72%;
+      height: 13%;
+    }
+
+    @media(min-width: $bureau){
+      padding-left: 8px;
+      padding-top: 3px;
+      width: 65%;
+      height: 12%;
     }
   }
 }
